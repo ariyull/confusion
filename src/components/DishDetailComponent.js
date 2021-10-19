@@ -3,15 +3,10 @@ import { Card, CardBody, CardImg, CardTitle } from 'reactstrap';
 
 class DishDetailComponent extends Component{
 
-    constructor(props) {
-        super(props);
-    };
-
     render(){
         if (this.props.dish == null) {
             return (<div className = "Font-helv col-md-5 col-sm-8 md-4 m-1 box">
-                <h1>Welcome to ConFusion</h1>
-                <p> Click on the dish to the left for more info. </p>    
+                <p> Click on the dish image for more info. </p>    
                 <p> Dish Details will appear here. </p>
             </div>)
         }

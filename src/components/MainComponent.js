@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { DISHES } from '../shared/dishes';
 import { DRINKS } from '../shared/drinklist';
-import NavComponent from './NavComponent'
 import Menu from './MenuComponents';
 import DrinkMenu from './DrinkComponents';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 
 
 class Main extends Component {
@@ -31,7 +32,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <NavComponent />
+        <Header />
         <Menu 
           dishes={this.state.dishes} 
           selectedDishId={this.state.selectedDishId} 
@@ -40,6 +41,7 @@ class Main extends Component {
           drinks = {this.state.drinks}
           selectedDrinkId={this.state.selectedDrinkId}
           onClick={this.onDrinkSelect}  />
+        <Footer />
       </div>
     );
   }
