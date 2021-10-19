@@ -6,6 +6,37 @@
   margin-right: 10px;
 }
 
+.Display-below {
+  height: 500px;
+  width: 500px;
+}
+
+
+
+
+.Font-helv {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:dodgerblue;
+  font-weight: bolder;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
+
+.Font-nav {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  white-space: initial;
+  color:rgb(255, 255, 255);
+  background-color:rgb(88, 77, 243)
+
+}
+
+
+.background {
+  background-color: rgb(240, 255, 251);
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,3 +53,5 @@
     transform: rotate(360deg);
   }
 }
+
+

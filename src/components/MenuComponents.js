@@ -1,95 +1,46 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardImg, CardImgOverlay, CardText, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, CardHeader } from 'reactstrap';
+import DishDetailComponent from './DishDetailComponent';
 
-// new component named Menu
-class Menu extends Component{
+class Menu extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            selectedDish: null
-        }
     }
 
-    onDishSelect(dish) {
-        this.setState({selectedDish: dish})
-    }
-
-    renderDish(dish) {
-        if (dish != null){
-
-            return(
-
-                <Card>
-                    <CardImg width="100%" object src={dish.image} alt={dish.name} /> 
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle> 
-                        <CardText> {dish.description} </CardText>                   
-                    </CardBody>
-                </Card>
-
-            )
-
-        }
-        else {
-            return(
-                <div></div>
-            )
-        }
-    }
-    
     render() {
-
         const menu = this.props.dishes.map(
             (dish) => {
-
-
-                return(
-                    <div key = {dish.id} className = "col-5 md-4 m-1" > 
-                        <Card onClick={()=> this.onDishSelect(dish)}>
-
-
-                                <div className ="col-4 col-sm-12">
-
-                                    
-                                        <CardImg width="100%" object src={dish.image} alt={dish.name} /> 
-                  
-
-                                </div>
-
-                                <div className ="col">
-
-                                <CardImgOverlay body className = "ml-5">
-                                    <CardTitle>{dish.name}</CardTitle>
-                                </CardImgOverlay>
-
-                                </div>
-
-                    
-
+                return (
+                    <div key={dish.id} className="col-6 md-4 m-1" >
+                        <Card onClick={() => this.props.onClick(dish.id)} className="Font-helv">
+                            <div className="col-4 col-sm-12">
+                                <CardImg width="99%" object src={dish.image} alt={dish.name} className="Font-helv" />
+                            </div>
+                            <div className="col Front-helv">
+                                <CardHeader body className="ml-5 Font-helv">
+                                    <CardTitle className="ml-5 Font-helv">{dish.name}</CardTitle>
+                                </CardHeader>
+                            </div>
                         </Card>
                     </div>
                 );
             }
-
-
-
         );
 
-
-
-
-        return(
+        return (
             <div className="container">
                 <div className="row">
-                        {menu} 
-                </div>
-                <div className="row">
-                    {this.renderDish(this.state.selectedDish)}
+                    <div className="col-md-3 col-sm-12">
+                        <h1 className="Font-helv"> Food: </h1>
+                        {menu}
+                    </div>
+                    <div className="col-md-9 col-sm-12">
+                        <DishDetailComponent dish={this.props.dishes[this.props.selectedDishId]} />
+                    </div>
                 </div>
             </div>
-        ); 
-
+        );
     }
 
 }

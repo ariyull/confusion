@@ -30,5 +30,5 @@ export const DRINKS = [
       category: 'cocktail',
       label:'sweet',
       price:'10.00',
-      description:'go get it girl'                        }
+      description:'get down girl, go ahead, get down'                        }
    ]
