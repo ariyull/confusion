@@ -23,11 +23,11 @@
 }
 
 .Font-nav {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Goudy Bookletter 1911", sans-serif;
   font-weight: bolder;
   white-space: initial;
   color:rgb(255, 255, 255);
-  background-color:rgb(88, 77, 243)
+  background-color:rgb(173, 201, 245)
 
 }
 
@@ -43,7 +43,12 @@
   }
 }
 
-
+.box{
+  border-radius: 3px;
+  border-color: rgb(79, 194, 209);
+  border-style:double;
+  padding: 20px;
+}
 
 @keyframes App-logo-spin {
   from {

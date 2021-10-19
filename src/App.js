@@ -9,7 +9,7 @@ class App extends Component {
 
   render() {
 
-    return (
+      return (
       <div className="background">
         <div className="row">
         <Main/>

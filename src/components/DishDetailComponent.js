@@ -9,11 +9,15 @@ class DishDetailComponent extends Component{
 
     render(){
         if (this.props.dish == null) {
-            return (<div></div>)
+            return (<div className = "Font-helv col-md-5 col-sm-8 md-4 m-1 box">
+                <h1>Welcome to ConFusion</h1>
+                <p> Click on the dish to the left for more info. </p>    
+                <p> Dish Details will appear here. </p>
+            </div>)
         }
         return(
             <div className="row">
-                <div className="col-md-5 col-sm-8 md-4 m-1" >
+                <div className="col-md-5 col-sm-8 md-4 m-1 box" >
                     <Card  >
                         <CardImg  width="99%" object src={this.props.dish.image} alt={this.name} className = "Font-helv" /> 
                         <CardBody >

@@ -9,7 +9,7 @@ class NavComponent extends Component{
             <Nav>
                 <div className="container">
                     <div className="row ">
-                        <div className = "col-12 Font-nav">
+                        <div className = "col-10 Font-nav">
                             <a href="/">
                                 <h1 className="Font-nav"> Restaurauntay Confusion </h1>
                             </a>
