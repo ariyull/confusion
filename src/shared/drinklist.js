@@ -30,5 +30,13 @@ export const DRINKS = [
       category: 'cocktail',
       label:'sweet',
       price:'10.00',
-      description:'get down girl, go ahead, get down'                        }
+      description:'get down girl, go ahead, get down'                        },
+   {
+      id: 4,
+      name:'fizzy bunny',
+      image: 'assets/images/fizzybunny.jpg',
+      category: 'cocktail',
+      label:'sweet',
+      price:'12.50',
+      description:'our signature cocktail made with fresh carrots for everybunny!'                        }
    ]
