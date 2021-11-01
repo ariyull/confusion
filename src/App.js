@@ -3,21 +3,21 @@ import Main from './components/MainComponent';
 import './App.css';
 import { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-
-
+import { Provider } from 'react-redux';
+import { store } from './redux/configureStore';
 
 class App extends Component {
-
   render() {
-
       return (
-      <BrowserRouter>
-      <div className="background">
-        <div className="row">
-        <Main/>
+      <Provider store ={store}>
+        <BrowserRouter>
+        <div className="background">
+          <div className="row">
+          <Main/>
+          </div>
         </div>
-      </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }

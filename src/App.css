@@ -1,4 +1,11 @@
-
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
 .App-logo {
   height: 100px;
   width: 100px;
@@ -34,6 +41,12 @@
 
 }
 
+
+.no-margin{
+  margin-bottom: 0px;
+  align-content: flex-start;
+  
+}
 
 .background {
   background-color: rgb(240, 255, 251);

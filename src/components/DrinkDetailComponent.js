@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardImg, CardTitle } from 'reactstrap';
 
+
+
+
 class DrinkDetailComponent extends Component{
-        
+
     render(){
         if (this.props.drink == null) {
             return (<div className = "Font-helv col-md-5 col-sm-8 md-4 m-1 box">
@@ -10,7 +13,8 @@ class DrinkDetailComponent extends Component{
                 <p> Drink Details will appear here. </p>
             </div>)
         }
-        return(        
+
+        return(      
             <div className="row">
                 <div className="col-md-5 col-sm-8 md-4 m-1 box" >
                     <Card  >
@@ -25,5 +29,7 @@ class DrinkDetailComponent extends Component{
         )
     }
 }
+
+
 
 export default DrinkDetailComponent;

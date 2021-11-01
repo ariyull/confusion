@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardTitle, CardHeader } from 'reactstrap';
+import { Card, CardImg, CardTitle, CardHeader, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import DishDetailComponent from './DishDetailComponent';
 
 class Menu extends Component {
@@ -28,6 +29,10 @@ class Menu extends Component {
         return (
             <div className="container">
                 <div className="row">
+                        <Breadcrumb>
+                            <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                            <BreadcrumbItem active>Menu</BreadcrumbItem>
+                        </Breadcrumb>
                     <div className="col-md-9 col-sm-12">
                         <DishDetailComponent dish={this.props.dishes[this.props.selectedDishId]} />
                     </div>
@@ -35,6 +40,7 @@ class Menu extends Component {
                         <h1 className="Font-helv"> Food: </h1>
                         {menu}
                     </div>
+
 
                 </div>
             </div>
